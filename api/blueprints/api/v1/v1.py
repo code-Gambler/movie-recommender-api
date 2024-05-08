@@ -1,9 +1,9 @@
-import json
 import sys
+import json
 from flask import Blueprint, request
 from pathlib import Path
 # #Adding our recommend
-sys.path.append(str(Path(__file__).parent.parent.parent.parent.parent) + "\\recommend-logic")
+sys.path.append(str(Path(__file__).parent.parent.parent.parent.parent) + "/recommend-logic")
 
 from recommend import get_recommendations, get_recommendations_by_genre
 
