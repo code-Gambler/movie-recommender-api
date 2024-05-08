@@ -19,9 +19,6 @@ jobs:
       name: Unit Tests
       runs-on: ubuntu-latest
       steps:
-        - name: Check out code
-          uses: actions/checkout@v3
-        
         - name: Install Git LFS
           run: |
             sudo apt-get update
@@ -29,6 +26,11 @@ jobs:
 
         - name: Initialize Git LFS
           run: git lfs install
+
+        - name: Check out code
+          uses: actions/checkout@v3
+          with:
+            lfs: 'true'
 
         - name: Download Git LFS files
           run: git lfs fetch
