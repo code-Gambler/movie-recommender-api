@@ -30,6 +30,9 @@ jobs:
         - name: Initialize Git LFS
           run: git lfs install
 
+        - name: Download Git LFS files
+          run: git lfs fetch
+
         - name: Set up Python 3.12.1
           uses: actions/setup-python@v2
           with:
